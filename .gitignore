@@ -1,0 +1,6 @@
+# virtualenv
+env/
+venv/
+
+# don't commit config file if it has discord info
+config.toml

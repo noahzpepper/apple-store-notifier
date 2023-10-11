@@ -1,0 +1,8 @@
+# The ZIP code to search
+location = ""
+
+# The model number to search. See the README for a reference list
+model = ""
+
+# A discord webhook URL. If provided, will post the message to discord in addition to stdout. (Optional)
+discord_webhook = ""
