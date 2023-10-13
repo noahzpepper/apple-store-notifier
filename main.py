@@ -1,9 +1,16 @@
-import datetime
-import requests
+"""
+Checks Apple Store for availability and sends a message to Discord.
+"""
 import tomllib
+import requests
 
 
-def main():
+def main() -> None:
+    """
+    Main function.
+
+    The program takes no arguments. Instead, configuration is read from config.toml file in the working directory.
+    """
     # Read in configuration
     with open("config.toml", "rb") as config_file:
         config = tomllib.load(config_file)
@@ -42,7 +49,7 @@ def main():
         )
         print(message)
         if discord_webhook != "":
-            response = requests.post(discord_webhook, data={"content": message})
+            requests.post(discord_webhook, data={"content": message})
 
 
 if __name__ == "__main__":
